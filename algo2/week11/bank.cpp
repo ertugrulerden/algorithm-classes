@@ -5,31 +5,31 @@ using namespace std;
 
 class Bank{
     public:
-    int bakiye;
-    int tc;
-    void cashout(int miktar);
-    void yatir(int miktar);
-    void bakiyeGoruntule();
+    int balance;
+    int id;
+    void cashout(int amount);
+    void deposit(int amount); 
+    void displayBalance();
     
-    Bank(int tcNo){
-        tc = tcNo;
-        bakiye = 0;
+    Bank(int accountId){
+        id = accountId;
+        balance = 0;
     }
 };
-void Bank::bakiyeGoruntule(){
-    cout << "tcNo: " << tc << endl;
-    cout << "bakiye: " << bakiye << endl;
+void Bank::displayBalance(){
+    cout << "Account ID: " << id << endl;
+    cout << "Balance: " << balance << endl;
 }
-void Bank::yatir(int miktar){
-    if (miktar<=0){ cout<<"pozitif miktar girin."<<endl; return;}
-    cout<<"eklenen miktar: " << miktar << endl;
-    bakiye += miktar;
+void Bank::deposit(int amount){
+    if (amount<=0){ cout<<"Please enter a positive amount."<<endl; return;}
+    cout<<"Deposited amount: " << amount << endl;
+    balance += amount;
 }
 
-void Bank::cashout(int miktar){
-    if (miktar<=0){ cout<<"pozitif miktar girin."<<endl; return;}
-    cout << "çekilen miktar: " << miktar << endl;
-    bakiye -= miktar;
+void Bank::cashout(int amount){
+    if (amount<=0){ cout<<"Please enter a positive amount."<<endl; return;}
+    cout << "Withdrawn amount: " << amount << endl;
+    balance -= amount;
 }
 
 
@@ -38,17 +38,17 @@ void Bank::cashout(int miktar){
 int main(){
 
     Bank myBank(123456);
-    myBank.yatir(1000);
-    myBank.bakiyeGoruntule();
+    myBank.deposit(1000);
+    myBank.displayBalance();
 
     myBank.cashout(500);
-    myBank.bakiyeGoruntule();
+    myBank.displayBalance();
 
-    myBank.yatir(-100);
-    myBank.bakiyeGoruntule();
+    myBank.deposit(-100);
+    myBank.displayBalance();
 
     myBank.cashout(200);
-    myBank.bakiyeGoruntule();
+    myBank.displayBalance();
 
 
 
