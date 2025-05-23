@@ -1,6 +1,6 @@
+#include <iostream>
 #include <string>
 using namespace std;
-#include <iostream>
 
 
 class MyClass{
@@ -21,7 +21,6 @@ class Car{
         model = y;
         year = z;
     }
-    
 };
 
 void Car::displayInfo(){
