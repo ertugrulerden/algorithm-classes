@@ -21,6 +21,7 @@ class Car{
         model = y;
         year = z;
     }
+    
 };
 
 void Car::displayInfo(){
@@ -38,11 +39,9 @@ int main(){
     // myCar.brand = "Ford";
     // myCar.model = "Mustang";
 
+    // constructor way to create an object
     Car myCar1("Toyota", "Corolla", 2022);
     Car myCar2("BMW", "X5", 2023);
-
-    
-
 
 
     myCar1.displayInfo();
