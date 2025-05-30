@@ -33,7 +33,7 @@ class Notes{
 int main(){
     Car C1;
     C1.brand = "Porsche";
-    C1.model = "GT 3 RS";
+    C1.model = "911 GT3 RS";
     C1.year = 2024;
 
     Car C2;
